@@ -61,16 +61,17 @@ function Contact() {
       .catch((err) => console.log(err))
   }
 
-  //   const axiosPostData = async() => {
-  //       const postData = {
-  //           email: email,
-  //           website: selectValue,
-  //           message: message
-  //       }
+  const axiosPostData = async () => {
+    const postData = {
+      email: email,
+      website: selectValue,
+      message: message,
+    }
 
-  //       await axios.post('http://localhost:4000/contact/send', postData)
-  //       .then(res => setError(<p className="success">{res.data}</p>))
-  //   }
+    await axios
+      .post('http://localhost:4000/contact', postData)
+      .then((res) => setError(<p className='success'>{res.data}</p>))
+  }
 
   const SelectDropdown = () => {
     return (
@@ -100,7 +101,7 @@ function Contact() {
       )
     } else {
       setError('')
-      // axiosPostData()
+      axiosPostData()
     }
   }
 

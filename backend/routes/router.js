@@ -2,12 +2,21 @@ const express = require('express')
 const router = express.Router()
 const schemas = require('../models/schemas')
 
+router.post('/contact', async (req, res) => {
+  // const email = req.body.email
+  // const website = req.body.website
+  const { email, website, message } = req.body
+
+  console.log(email + ' | ' + website + ' | ' + message)
+  res.send('Message sent. Thank you.')
+})
+
 // router.post('/contact/:a', async(req, res) => {
 //   // const email = req.body.email
 //   // const website = req.body.website
 //   const {email, website, message} = req.body
 //   const action = req.params.a
-  
+
 //   switch(action) {
 //     case "send":
 //       const contactData = {email: email, website: website, message: message}
@@ -29,7 +38,6 @@ const schemas = require('../models/schemas')
 // })
 
 router.get('/users', async (req, res) => {
-
   // uncomment to pull data from the users table using MongoDB
   // const users = schemas.Users
   // const userData = await users.find({}).exec()
@@ -41,28 +49,27 @@ router.get('/users', async (req, res) => {
   // comment this out and uncomment the mongodb above if you wish to
   // pull data from the database. However, make sure that this data exists
   // inside of the contact_form table for it to work
-  const userData = 
-  [
+  const userData = [
     {
-      "id": 1,
-      "name": "Leanne Graham",
-      "email": "Sincere@april.biz",
-      "website": "hildegard.org"
+      id: 1,
+      name: 'Leanne Graham',
+      email: 'Sincere@april.biz',
+      website: 'hildegard.org',
     },
     {
-      "id": 2,
-      "name": "Ervin Howell",
-      "email": "Shanna@melissa.tv",
-      "website": "anastasia.net"
+      id: 2,
+      name: 'Ervin Howell',
+      email: 'Shanna@melissa.tv',
+      website: 'anastasia.net',
     },
     {
-      "id": 3,
-      "name": "Clementine Bauch",
-      "email": "Nathan@yesenia.net",
-      "website": "ramiro.info"
-    }
+      id: 3,
+      name: 'Clementine Bauch',
+      email: 'Nathan@yesenia.net',
+      website: 'ramiro.info',
+    },
   ]
-  
+
   res.send(userData)
 })
 
