@@ -48,10 +48,11 @@ function Contact() {
   //       .catch((err) => console.log(err))
   //   }
 
-  // await axios.get('http://localhost:4000/users')
   const axiosFetchData = async (processing) => {
     await axios
-      .get('https://jsonplaceholder.typicode.com/users')
+      .get('http://localhost:4000/users')
+      //   await axios
+      //   .get('https://jsonplaceholder.typicode.com/users')
       .then((res) => {
         if (processing) {
           setSelectData(res.data)
