@@ -48,10 +48,11 @@ function Contact() {
   //       .catch((err) => console.log(err))
   //   }
 
-  // await axios.get('http://localhost:4000/users')
   const axiosFetchData = async (processing) => {
     await axios
-      .get('https://jsonplaceholder.typicode.com/users')
+      .get('http://localhost:4000/users')
+      //   await axios
+      //   .get('https://jsonplaceholder.typicode.com/users')
       .then((res) => {
         if (processing) {
           setSelectData(res.data)
@@ -60,16 +61,17 @@ function Contact() {
       .catch((err) => console.log(err))
   }
 
-  //   const axiosPostData = async() => {
-  //       const postData = {
-  //           email: email,
-  //           website: selectValue,
-  //           message: message
-  //       }
+  const axiosPostData = async () => {
+    const postData = {
+      email: email,
+      website: selectValue,
+      message: message,
+    }
 
-  //       await axios.post('http://localhost:4000/contact/send', postData)
-  //       .then(res => setError(<p className="success">{res.data}</p>))
-  //   }
+    await axios
+      .post('http://localhost:4000/contact', postData)
+      .then((res) => setError(<p className='success'>{res.data}</p>))
+  }
 
   const SelectDropdown = () => {
     return (
@@ -99,7 +101,7 @@ function Contact() {
       )
     } else {
       setError('')
-      // axiosPostData()
+      axiosPostData()
     }
   }
 
