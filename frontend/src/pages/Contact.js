@@ -50,7 +50,8 @@ function Contact() {
 
   const axiosFetchData = async (processing) => {
     await axios
-      .get('http://localhost:4000/users')
+    .get('/users')
+    // .get('http://localhost:4000/users')
       //   await axios
       //   .get('https://jsonplaceholder.typicode.com/users')
       .then((res) => {
@@ -68,8 +69,10 @@ function Contact() {
       message: message,
     }
 
+    // await axios
+    //   .post('http://localhost:4000/contact', postData)
     await axios
-      .post('http://localhost:4000/contact', postData)
+      .post('/contact', postData)
       .then((res) => setError(<p className='success'>{res.data}</p>))
   }
 

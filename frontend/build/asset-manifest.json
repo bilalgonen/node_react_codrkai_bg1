@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.8dc58bfa.css",
+    "main.js": "/static/js/main.cb16de44.js",
+    "static/media/ocean-bg.jpg": "/static/media/ocean-bg.3349d0576eb36ce892f6.jpg",
+    "static/media/eat-sleep-code-repeat.jpg": "/static/media/eat-sleep-code-repeat.0fb8b82e23981f584d37.jpg",
+    "static/media/good-day-to-code.jpg": "/static/media/good-day-to-code.e18117e026981b005f2b.jpg",
+    "static/media/react-logo.png": "/static/media/react-logo.20adfb35ae6a6e5817bf.png",
+    "index.html": "/index.html",
+    "main.8dc58bfa.css.map": "/static/css/main.8dc58bfa.css.map",
+    "main.cb16de44.js.map": "/static/js/main.cb16de44.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8dc58bfa.css",
+    "static/js/main.cb16de44.js"
+  ]
+}
