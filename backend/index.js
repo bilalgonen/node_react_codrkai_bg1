@@ -24,7 +24,7 @@ app.use('/', router)
 // .then(() => console.log('DB Connected!'))
 // .catch(err => console.log(err))
 
-const port = process.env.PORT || 4000
+const port = process.env.PORT || 80
 const server = app.listen(port, () => {
   console.log(`Server is running on port ${port}`)
 })

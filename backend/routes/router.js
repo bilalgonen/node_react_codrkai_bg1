@@ -2,6 +2,8 @@ const express = require('express')
 const router = express.Router()
 const schemas = require('../models/schemas')
 
+router.get('/', (req, res) => res.json({ message: 'Hello World' }))
+
 router.post('/contact', async (req, res) => {
   // const email = req.body.email
   // const website = req.body.website
